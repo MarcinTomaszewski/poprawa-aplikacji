@@ -20,41 +20,41 @@ var movies = [
         title: 'Harry Potter', 
         desc: 'film o czarodzieju',
         year: 2001,
-        photo: 'harry-potter.jpg'       //mam problem z wstawieniem zdjącia
+        src: 'images/harry-potter.jpg'       //mam problem z wstawieniem zdjącia
     }, 
     {
         id: 2,
         title: 'Król Lew', 
         desc: 'film o królu sawanny',
         year: 1994,
-        photo: 'król-lew.jpg'
+        src: 'images/król-lew.jpg'
     },
     {   id: 3,
         title: 'Skazani na Shawshank',
         desc: 'film o niesłusznie skazanym bankierze',
         year: 1994,
-        photo: 'shawshank.jpg'
+        src: 'images/shawshank.jpg'
     },
     {
         id: 4,
         title: 'Nietykalni',
         desc: 'Sparaliżowany milioner zatrudnia do opieki młodego chłopaka z przedmieścia',
         year: 2011,
-        photo: 'nietykalni.jpg'
+        src: 'images/nietykalni.jpg'
     }, 
     {
         id: 5,
         title: 'Zielona mila',
         desc: 'Emerytowany strażnik więzienny opowiada przyjaciółce o niezwykłym mężczyźnie',
         year: 1999,
-        photo: 'zielona-mila.jpg'
+        src: 'images/zielona-mila.jpg'
     }, 
     {
         id: 6,
         title: 'Ojciec chrzestny',
         desc: 'Opowieść o nowojorskiej rodzinie mafijnej',
         year: 1972,
-        photo: 'ojciec-chrzesny.jpg'
+        src: 'images/ojciec-chrzestny.jpg'
     }, 
 ];
 
@@ -64,9 +64,11 @@ var moviesElements = movies.map(function(movie){
         React.createElement('h2', {}, movie.title),
         React.createElement('p', {}, movie.desc),
         React.createElement('p', {}, 'Rok produkcji: ' + movie.year),
-        React.createElement('p', {}, movie.photo)
+        React.createElement('img', {src: movie.src}, )
     );
 });
+
+
 
 //odpowiednie umieszczenie elementów w liście
 var element =
